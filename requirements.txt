@@ -1,0 +1,6 @@
+torch>=2.7.0
+torchvision>=0.19.0
+dfloat11[cuda12]
+huggingface_hub
+git+https://github.com/huggingface/diffusers
+

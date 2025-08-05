@@ -1,0 +1,16 @@
+FROM pytorch/pytorch:2.7.1-cuda12.8-cudnn9-devel
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=america/los_angeles
+ENV PIP_ROOT_USER_ACTION=ignore
+
+RUN apt update && \
+    apt install --no-install-recommends -q -y \
+      git
+
+COPY requirements.txt /
+
+RUN pip install --upgrade pip && \
+   pip install -r /requirements.txt
+
+ENTRYPOINT ["/bin/bash", "/project/scripts/run.sh"]
