@@ -25,6 +25,7 @@ $ make image
 ```bash
 $ make run
 ```
+On NVIDIA 5090 card, it takes about 45 minutes to generate about 81 frames of 1280x720p video
 
 ## References
 * https://github.com/Wan-Video/Wan2.2
