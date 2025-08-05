@@ -1,6 +1,10 @@
 # video_diffusion_play
 Generate videos from text using the latest Wan2.2 model from https://wan.video and Alibaba's Tongyi Lab
 
+[![IMAGE ALT Sample Video](https://img.youtube.com/vi/JceQY6UzGBI/0.jpg)](https://www.youtube.com/watch?v=JceQY6UzGBI)
+
+"Over-the-shoulder shot, two shot, telephoto lens, warm colors, high contrast lighting, soft lighting, daylight, daylight, close-up shot, center composition.In an eye-level shot, a foreign girl sits by a window. She is wearing a red and black striped sweater over a blue turtleneck, and her short, smooth golden hair is tucked behind her ears. Her gaze is gentle as she looks at someone off-camera with a slight smile, her expression natural and friendly. Her hands are gently folded on the table, where an open book and a white ceramic cup with steam gently rising are placed. The background is out-of-focus, with soft daylight streaming in through the window. Faint warm yellow lights and scattered red decorations are visible, creating a cozy atmosphere."
+
 ## Hardware Configuration 
 * Intel/AMD system with at least 24 cores
 * 256 GB DDR5
