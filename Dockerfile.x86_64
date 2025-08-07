@@ -6,11 +6,23 @@ ENV PIP_ROOT_USER_ACTION=ignore
 
 RUN apt update && \
     apt install --no-install-recommends -q -y \
-      git
+      git && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /
 
 RUN pip install --upgrade pip && \
-   pip install -r /requirements.txt
+    pip install --no-cache-dir -r /requirements.txt
+
+# Create a non-root user
+ARG USERNAME=user
+ARG USER_UID=2000
+ARG USER_GID=2000
+RUN groupadd --gid ${USER_GID} ${USERNAME} && \
+    useradd --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME} && \
+    chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}
+
+# Switch to non-root user
+USER ${USERNAME}
 
 ENTRYPOINT ["/bin/bash", "/project/scripts/run.sh"]

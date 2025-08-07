@@ -1,6 +1,8 @@
 torch>=2.7.0
 torchvision>=0.19.0
 dfloat11[cuda12]
+hf_transfer
 huggingface_hub
-git+https://github.com/huggingface/diffusers
+ftfy
+git+https://github.com/huggingface/diffusers@50e18ee6982f8006e7247c756c573b8204fe354b
 

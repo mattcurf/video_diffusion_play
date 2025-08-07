@@ -19,7 +19,11 @@ DOCKER_ARGS += $(DOCKER_IMAGE_NAME)
 
 default: run
 
-image:
+models output_folder:
+	mkdir $@
+	chmod a+rwx $@
+
+image: models output_folder
 	@echo "Building Docker image $(DOCKER_IMAGE_NAME)..."
 	@docker build . --progress plain -f Dockerfile.$(ARCH) -t $(DOCKER_IMAGE_NAME)
 
